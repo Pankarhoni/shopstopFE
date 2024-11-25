@@ -1,0 +1,83 @@
+.relatedproducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0; /* Slightly reduced bottom padding for a cleaner look */
+}
+
+.relatedproducts h1 {
+    color: #171717;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.relatedproducts hr {
+    width: 150px;
+    height: 4px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.relatedproducts-item {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items are in a single row */
+    gap: 20px; /* Adjusted gap for visual separation */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+    scrollbar-width: thin; /* Thinner scrollbar for supporting browsers */
+    scrollbar-color: #ccc #f0f0f0; /* Custom scrollbar colors */
+    /* Ensure there is enough vertical space to prevent unintended vertical scroll */
+    padding-bottom: 1rem; /* Adjust as needed */
+}
+
+
+.relatedproducts-item .item {
+    min-width: 250px; /* Adjusted for better responsiveness on various screens */
+    flex-shrink: 0; /* Prevent item from shrinking */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.relatedproducts-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensure images cover their area nicely */
+}
+
+.relatedproducts-item .item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Added gap for spacing between text elements */
+}
+
+/* Custom scrollbar styles for Webkit browsers */
+.relatedproducts-item::-webkit-scrollbar {
+    height: 8px;
+}
+
+.relatedproducts-item::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.relatedproducts-item::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .relatedproducts h1 {
+        font-size: 30px;
+    }
+    .relatedproducts hr {
+        width: 100px;
+        height: 4px;
+    }
+    .relatedproducts-item .item {
+        min-width: 90%; /* Allows for a bit of margin on smaller screens */
+    }
+}

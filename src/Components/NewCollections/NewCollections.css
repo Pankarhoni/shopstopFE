@@ -1,0 +1,35 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.new-collections hr {
+    width: 150px;
+    height: 4px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px auto;
+    gap: 60px;
+    max-width: 1280px;
+}
+
+.new-collections img {
+    height: 250px; /* Adjust the height to fit your design */
+    object-fit: cover; /* Ensure the image covers the area, maintaining aspect ratio */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
