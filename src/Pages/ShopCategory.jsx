@@ -3,7 +3,7 @@ import "./CSS/ShopCategory.css";
 
 import Item from "../Components/Item/Item";
 import { Link } from "react-router-dom";
-import { API_URL } from "../config";
+ const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 const ShopCategory = (props) => {
 
