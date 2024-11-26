@@ -8,7 +8,7 @@ const RelatedProducts = ({ tag }) => {
 
   useEffect(() => {
     // Simulate fetching data. Replace this with your actual data fetching logic.
-    fetch('${API_URL}/allproducts')
+    fetch(`${API_URL}/allproducts`)
       .then((res) => res.json())
       .then((data) => {
         // Filter products by the passed tag and limit to 4 items
