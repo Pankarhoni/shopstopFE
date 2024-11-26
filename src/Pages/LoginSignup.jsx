@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
-import { API_URL } from "../config";
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+console.log("API_URL:", API_URL); // This should log the URL being used
+
 
 const LoginSignup = () => {
 
