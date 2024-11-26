@@ -1,7 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import './NewCollections.css'
 import Item from '../Item/Item'
-import { API_URL } from "../../config";
+import { API_URL } from "../../../config"; // One more directory up, just in case
+
 
 const NewCollections = (props) => {
   const [new_collection,setNew_collection]=useState([]);
