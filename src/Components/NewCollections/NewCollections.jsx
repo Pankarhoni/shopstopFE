@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import './NewCollections.css'
 import Item from '../Item/Item'
-import { API_URL } from "../../../config"; // One more directory up, just in case
+ const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 
 const NewCollections = (props) => {
