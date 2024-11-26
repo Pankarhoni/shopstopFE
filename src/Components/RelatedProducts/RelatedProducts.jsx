@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './RelatedProducts.css';
 import Item from '../Item/Item';
+import { API_URL } from "../config"; // Importing API_URL
 
 const RelatedProducts = ({ tag }) => {
   const [relatedProducts, setRelatedProducts] = useState([]);
 
   useEffect(() => {
     // Simulate fetching data. Replace this with your actual data fetching logic.
-    fetch('http://localhost:4000/allproducts')
+    fetch('${API_URL}/allproducts')
       .then((res) => res.json())
       .then((data) => {
         // Filter products by the passed tag and limit to 4 items
