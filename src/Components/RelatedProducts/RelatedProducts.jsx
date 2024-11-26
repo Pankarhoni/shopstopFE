@@ -7,14 +7,15 @@ const RelatedProducts = ({ tag }) => {
   const [relatedProducts, setRelatedProducts] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching data. Replace this with your actual data fetching logic.
-    fetch(`${API_URL}/allproducts`)
+    // Fetch products from the backend
+    fetch(`${API_URL}/allproducts`)  // Correct usage of template literals
       .then((res) => res.json())
       .then((data) => {
-        // Filter products by the passed tag and limit to 4 items
+        // Filter products by the passed tag and limit to 8 items
         const filteredProducts = data.filter(item => item.tag === tag).slice(0, 8);
         setRelatedProducts(filteredProducts);
-      });
+      })
+      .catch((error) => console.error("Error fetching related products:", error));
   }, [tag]); // Rerun when the tag changes
   
   return (
