@@ -1,7 +1,10 @@
 import React,{useEffect,useState} from 'react'
 import './NewCollections.css'
 import Item from '../Item/Item'
- const API_URL = process.env.REACT_APP_BACKEND_URL;
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
+console.log("API_URL:", API_URL); // This should log the URL being used
+
 
 
 const NewCollections = (props) => {
