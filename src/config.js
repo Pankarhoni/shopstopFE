@@ -1,2 +1,2 @@
-// Set the API_URL directly
-export const API_URL = "https://shopstopbe.onrender.com";
+export const API_URL = process.env.REACT_APP_BACKEND_URL || "https://shopstopbe.onrender.com";
+
