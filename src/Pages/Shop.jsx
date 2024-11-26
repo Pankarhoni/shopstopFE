@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Hero from '../Components/Hero/Hero'
 import NewCollections from '../Components/NewCollections/NewCollections'
-import { API_URL } from "../config"; // Importing API_URL
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+console.log("API_URL:", API_URL); // This should log the URL being used
 
 const Shop = () => {
 
