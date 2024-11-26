@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import './Item.css'
 import { Link } from 'react-router-dom'
 
@@ -15,4 +15,30 @@ const Item = (props) => {
   )
 }
 
-export default Item
+export default Item*/
+
+import React from 'react';
+import './Item.css';
+import { Link } from 'react-router-dom';
+
+const Item = (props) => {
+  return (
+    <div className='item'>
+      <Link to={`/product/${props.id}`} style={{ textDecoration: 'none' }}>
+        <img
+          onClick={() => window.scrollTo(0, 0)} // Wrap with an arrow function to handle click event correctly
+          src={props.image} // Displaying the Base64 image here
+          alt="product"
+        />
+      </Link>
+      <p>{props.name}</p>
+      <div className="item-prices">
+        <div className="item-price-new">Rs {props.new_price}</div>
+        <div className="item-price-old">Rs {props.old_price}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Item;
+
