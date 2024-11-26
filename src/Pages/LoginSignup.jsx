@@ -13,7 +13,7 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch('${API_URL}/login', {
+    await fetch(`${API_URL}/login`, {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
@@ -36,7 +36,7 @@ const LoginSignup = () => {
 
   const signup = async () => {
     let dataObj;
-    await fetch('${API_URL}/signup', {
+    await fetch(`${API_URL}/signup`, {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
