@@ -1,5 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
-import { API_URL } from "../config"; // Importing API_URL
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+console.log("API_URL:", API_URL); // This should log the URL being used
+
 
 
 export const ShopContext = createContext(null);
