@@ -3,13 +3,14 @@ import "./CSS/ShopCategory.css";
 
 import Item from "../Components/Item/Item";
 import { Link } from "react-router-dom";
+import { API_URL } from "../config";
 
 const ShopCategory = (props) => {
 
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchInfo = () => { 
-    fetch('http://localhost:4000/allproducts') 
+    fetch(`${API_URL}/allproducts`) 
             .then((res) => res.json()) 
             .then((data) => setAllProducts(data))
     }
