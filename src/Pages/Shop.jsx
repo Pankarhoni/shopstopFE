@@ -8,7 +8,7 @@ const Shop = () => {
   const [newcollection, setNewCollection] = useState([]);
 
   const fetchInfo = () => { 
-    fetch('${API_URL}/newcollections') 
+    fetch(`${API_URL}/newcollections`) 
             .then((res) => res.json()) 
             .then((data) => setNewCollection(data))
     }
